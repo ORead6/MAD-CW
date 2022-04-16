@@ -4,10 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
 import android.content.Intent;
-import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -16,34 +14,20 @@ import java.util.Calendar;
 
 public class createAccountActivity extends AppCompatActivity implements DatePickerDialog.OnDateSetListener {
 
-    private ImageButton confirmAccCreation;
-    private TextView dateText;
-    private TextView dobBtn;
-    private String dob;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        ImageButton confirmAccCreation;
+        TextView dobBtn;
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_account);
 
-        dateText = findViewById(R.id.selectedDOB);
 
-        confirmAccCreation = (ImageButton) findViewById(R.id.createAccount_back);
-        confirmAccCreation.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                toLogin();
-            }
-        });
+        confirmAccCreation = findViewById(R.id.createAccount_back);
+        confirmAccCreation.setOnClickListener((View v) -> toLogin());
 
-        dobBtn = (TextView) findViewById(R.id.dobBtn);
-        dobBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                showDatePickerDialog();
-            }
-        });
-
+        dobBtn = findViewById(R.id.dobBtn);
+        dobBtn.setOnClickListener((View v) -> showDatePickerDialog());
 
     }
 
@@ -68,6 +52,8 @@ public class createAccountActivity extends AppCompatActivity implements DatePick
 
     @Override
     public void onDateSet(DatePicker datePicker, int year, int month, int day) {
+        TextView dateText = findViewById(R.id.selectedDOB);
+        String dob;
         dob = day + "/" + (month+1) + "/" + year;
         dateText.setText(dob);
     }
