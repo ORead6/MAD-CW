@@ -1,20 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:foregroundTint="#FFFEFE"
-    tools:context=".loginActivity">
+    tools:context=".createAccountActivity">
 
+    <TextView
+        android:id="@+id/accCreateLabel"
+        android:layout_width="246dp"
+        android:layout_height="93dp"
+        android:layout_marginTop="64dp"
+        android:fontFamily="monospace"
+        android:text="Account Creation"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/confirmAccountCreation"
         android:layout_width="217dp"
         android:layout_height="49dp"
+        android:layout_marginTop="16dp"
         android:text="Create Account"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dob" />
+        app:layout_constraintTop_toBottomOf="@+id/selectedDOB" />
 
     <EditText
         android:id="@+id/createPassword"
@@ -46,18 +60,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/dob"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="DOB (dd/mm/yyyy)"
-        android:inputType="date"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/createPassword" />
-
     <ImageButton
         android:id="@+id/createAccount_back"
         android:layout_width="38dp"
@@ -71,5 +73,29 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:drawable/arrow_down_float" />
+
+    <TextView
+        android:id="@+id/dobBtn"
+        android:layout_width="97dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="monospace"
+        android:text="Select DOB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.318"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/createPassword" />
+
+    <TextView
+        android:id="@+id/selectedDOB"
+        android:layout_width="212dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="36dp"
+        android:text="01/01/2000"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/createPassword" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
