@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".moodSelector">
+
+    <ImageView
+        android:id="@+id/faceFive"
+        android:layout_width="335dp"
+        android:layout_height="107dp"
+        android:layout_marginTop="4dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/facefive_foreground" />
+
+    <ImageView
+        android:id="@+id/faceTwo"
+        android:layout_width="335dp"
+        android:layout_height="107dp"
+        android:layout_marginTop="360dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/facetwo_foreground" />
+
+    <ImageView
+        android:id="@+id/faceOne"
+        android:layout_width="335dp"
+        android:layout_height="107dp"
+        android:layout_marginTop="484dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/faceone_foreground" />
+
+    <ImageView
+        android:id="@+id/question"
+        android:layout_width="335dp"
+        android:layout_height="107dp"
+        android:layout_marginTop="608dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/question_foreground" />
+
+    <ImageView
+        android:id="@+id/faceFour"
+        android:layout_width="335dp"
+        android:layout_height="107dp"
+        android:layout_marginTop="124dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/facefour_foreground" />
+
+    <ImageView
+        android:id="@+id/face3"
+        android:layout_width="335dp"
+        android:layout_height="107dp"
+        android:layout_marginTop="240dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/facethree_foreground" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
